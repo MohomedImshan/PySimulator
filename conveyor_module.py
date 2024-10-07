@@ -217,7 +217,7 @@ class ScreenCapture:
 
             #pygame.transform.smoothscale(capture_image,)
             # Save the captured image
-            imgFile = f"captures/image{self.imgCounter:02}.png"
+            imgFile = f"captures_7/image{self.imgCounter:02}.png"
             pygame.image.save(capture_image, imgFile)
 
             #only send image for analysis if opted
@@ -323,11 +323,10 @@ class Simulation:
 
             #draw the status text
             statusMsg.draw(screen, 
-                           f"Bad Cookies: {badCookies} | " + 
-                           f"Rejected Bad Cookies: {arm.rejectedCookies} " +
-                           f"(Efficiency:{(100 * float(arm.rejectedCookies)/float(badCookies)
-                                           if badCookies>0 else 0):.0f}%)",
-                           (0,0))
+               f"Bad Cookies: {badCookies} | " + 
+               f"Rejected Bad Cookies: {arm.rejectedCookies} " +
+               f"(Efficiency: {(100 * float(arm.rejectedCookies) / float(badCookies)) if badCookies > 0 else 0:.0f}%)",
+               (0,0))
 
             # Remove cookies that have moved off the screen
             cookies = [cookie for cookie in cookies if cookie.x < SCREEN_WIDTH]

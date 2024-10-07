@@ -3,10 +3,10 @@
 
 NOTES FOR STUDEENTS
 -------------------
-Change this file appropriately
-    1. update the endpoint URL
-    2. update the API Key or update your environment variable
-    3. (If required) change the logic
+    Change this file appropriately
+        1. update the endpoint URL
+        2. update the API Key or update your environment variable
+        3. (If required) change the logic
 
 ***********************************************************************
 '''
@@ -18,8 +18,8 @@ import os
 
 class CloudAnalyzer:
     def __init__(self):
-        self.endPoint = '[CLOUD URL]'
-        self.apiKey = '[API KEY]'
+        self.endPoint = 'https://2021csc042uojstud-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/73226c87-ab3f-4584-a919-af0ca7f38d58/detect/iterations/Iteration3/image'
+        self.apiKey = '7c9f632bdfe74765b4d7f0b798f710e0'
 
     def analyzeImage(self, filePath) -> int:
         start_time = time.time()
